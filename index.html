@@ -13,10 +13,10 @@
   <body>
       <!-- NAVIGATION -->
       <div class="ui pointing menu">
-        <a class="active item">
+        <a class="active item" onClick="showForm()">
           Create Shoes
         </a>
-        <a class="item">
+        <a class="item" onclick="allShoes()">
           View Shoes
         </a>
         <a class="item">
@@ -32,8 +32,8 @@
         </div>
       </div>
       <!-- END OF NAVIGATION -->
-  <div class="ui segment">
-    <form class="ui form" onsubmit="createShoe()">
+  <div class="ui segment items">
+    <form class="ui form success error" onsubmit="createShoe()">
       <div class="field">
         <label>Shoe Brand</label>
         <input type="text" name="shoe-brand" placeholder="Shoe Brand">
@@ -49,6 +49,14 @@
       <div class="field">
         <label>Shoe Image Link</label>
         <input type="text" name="shoe-image" placeholder="Shoe Image URL">
+      </div>
+      <div class="ui success message" style="display: none">
+        <div class="header">Form Completed</div>
+        <p>You have succesfully created a show.</p>
+      </div>
+      <div class="ui error message" style="display: none">
+        <div class="header">Action Forbidden</div>
+        <p id="errmsg"></p>
       </div>
       <button class="ui button" type="submit">Create Shoe</button>
     </form>

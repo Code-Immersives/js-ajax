@@ -11,22 +11,48 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
   </head>
   <body>
-    <form class="ui form">
-  <div class="field">
-    <label>First Name</label>
-    <input type="text" name="first-name" placeholder="First Name">
+      <!-- NAVIGATION -->
+      <div class="ui pointing menu">
+        <a class="active item">
+          Create Shoes
+        </a>
+        <a class="item">
+          View Shoes
+        </a>
+        <a class="item">
+          Edit Shoes
+        </a>
+        <div class="right menu">
+          <div class="item">
+            <div class="ui transparent icon input">
+              <input type="text" placeholder="Search...">
+              <i class="search link icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END OF NAVIGATION -->
+  <div class="ui segment">
+    <form class="ui form" onsubmit="createShoe()">
+      <div class="field">
+        <label>Shoe Brand</label>
+        <input type="text" name="shoe-brand" placeholder="Shoe Brand">
+      </div>
+      <div class="field">
+        <label>Shoe Size</label>
+        <input type="number" name="shoe-size" placeholder="Shoe Size">
+      </div>
+      <div class="field">
+        <label>Shoe Color</label>
+        <input type="text" name="shoe-color" placeholder="Shoe Color">
+      </div>
+      <div class="field">
+        <label>Shoe Image Link</label>
+        <input type="text" name="shoe-image" placeholder="Shoe Image URL">
+      </div>
+      <button class="ui button" type="submit">Create Shoe</button>
+    </form>
   </div>
-  <div class="field">
-    <label>Last Name</label>
-    <input type="text" name="last-name" placeholder="Last Name">
-  </div>
-  <div class="field">
-    <div class="ui checkbox">
-      <input type="checkbox" tabindex="0" class="hidden">
-      <label>I agree to the Terms and Conditions</label>
-    </div>
-  </div>
-  <button class="ui button" type="submit">Submit</button>
-</form>
+  <script type="text/javascript" src="shoe.js"></script>
   </body>
 </html>

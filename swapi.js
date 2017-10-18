@@ -40,8 +40,7 @@ let vans = {
 fetch('http://localhost:3000/shoes', {
   method: 'POST',
   headers: {
-    'content-type': 'application/json',
-    'accept': 'application/json'
+    'content-type': 'application/json'
   },
   body: JSON.stringify(vans)
 
